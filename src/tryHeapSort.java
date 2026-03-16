@@ -1,14 +1,8 @@
 /*
  * tryHeapsort.java
- * Author: Didi
- *
- * NOTE: This code was developed with the assistance of Microsoft Copilot
- * and ChatGPT for debugging guidance.
- *
- * Task: Build a heap from the words in "joyce1922_ulysses.text"
- * and compare bottom-up vs top-down heap construction for sorting.
+ * Author: Didintle Oupa Moratamotho
+ * 4543686
  */
-
 import java.io.*;
 import java.util.*;
 
@@ -24,7 +18,7 @@ public class tryHeapSort {
             size = 0;
         }
 
-        // Insert top-down
+
         public void insert(String word) {
             heap[size] = word;
             int current = size;
@@ -39,7 +33,7 @@ public class tryHeapSort {
             }
         }
 
-        // Bottom-up build
+
         public void buildHeapBottomUp(String[] words) {
             heap = words.clone();
             size = words.length;
@@ -139,7 +133,7 @@ public class tryHeapSort {
         long bottomUpTimeSmall = timeHeapSortBottomUp(testWords);
         long topDownTimeSmall = timeHeapSortTopDown(testWords);
 
-        System.out.println("Small Test ");
+        System.out.println("Small Test: ");
         System.out.println("Bottom-up heap sort time: " + bottomUpTimeSmall + " ns");
         System.out.println("Top-down heap sort time: " + topDownTimeSmall + " ns");
 
@@ -149,7 +143,7 @@ public class tryHeapSort {
         long bottomUpTimeBig = timeHeapSortBottomUp(ulyssesWords);
         long topDownTimeBig = timeHeapSortTopDown(ulyssesWords);
 
-        System.out.println("\nUlysses Dataset");
+        System.out.println("\nUlysses Dataset:");
         System.out.println("Bottom-up heap sort time: " + bottomUpTimeBig + " ns");
         System.out.println("Top-down heap sort time: " + topDownTimeBig + " ns");
 
